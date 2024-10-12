@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Beginner Blog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  
+  <nav id="navbar">
+    <header>React Beginner Blog</header>
+    <a href="#Introduction_to_React" class="nav-link">Introduction to React</a>
+    <a href="#Components_in_React" class="nav-link">Components in React</a>
+    <a href="#State_and_Props" class="nav-link">State and Props</a>
+    <a href="#Lifecycle_Methods" class="nav-link">Lifecycle Methods</a>
+    <a href="#Hooks_in_React" class="nav-link">Hooks in React</a>
+  </nav>
+
+  
+  <main id="main-doc">
+    <section class="main-section" id="Introduction_to_React">
+      <header>Introduction to React</header>
+      <p>React is a JavaScript library developed by Facebook for building user interfaces. It allows developers to create large web applications that can change data, without reloading the page.</p>
+      <p>One of the primary benefits of React is its ability to efficiently update and render just the right components when your data changes, thanks to its virtual DOM.</p>
+      <p>To start using React, you need to set up a React application using tools like Create React App. Here's a simple way to create a new React app:</p>
+      <code>npx create-react-app my-app</code>
+      <p>Once your project is set up, you can create your first component:</p>
+      <code>
+        function MyComponent() {'{'}<br>
+          return &lt;div&gt;Hello World!&lt;/div&gt;<br>
+        {'}'}
+      </code>
+      <p>This is a basic introduction to React and its component-based architecture.</p>
+    </section>
+
+    <section class="main-section" id="Components_in_React">
+      <header>Components in React</header>
+      <p>Components are the building blocks of a React application. They encapsulate logic and UI in reusable pieces.</p>
+      <p>Components can be defined as either functional components or class components.</p>
+      <p>A functional component is a JavaScript function that returns a React element. Here’s a simple example:</p>
+      <code>
+        const MyFunctionalComponent = () => {'{'}<br>
+          return &lt;h1&gt;Welcome to React!&lt;/h1&gt;<br>
+        {'}'}
+      </code>
+      <p>Class components, on the other hand, are ES6 classes that extend from React.Component:</p>
+      <code>
+        class MyClassComponent extends React.Component {'{'}<br>
+          render() {'{'}<br>
+            return &lt;h1&gt;Welcome to React Class Component!&lt;/h1&gt;<br>
+          {'}'}<br>
+        {'}'}
+      </code>
+      <p>Components can accept inputs called props, which allow you to pass data from parent to child components.</p>
+      <ul>
+        <li>Reusable code</li>
+        <li>Separation of concerns</li>
+        <li>Easy to test</li>
+        <li>Better maintainability</li>
+        <li>Improved collaboration</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="State_and_Props">
+      <header>State and Props</header>
+      <p>State is a built-in object that allows components to create and manage their own data. It can be modified using the setState function in class components or the useState hook in functional components.</p>
+      <p>Props, on the other hand, are immutable and are used to pass data from a parent component to a child component.</p>
+      <p>Here’s a simple example of using state in a functional component:</p>
+      <code>
+        const Counter = () => {'{'}<br>
+          const [count, setCount] = useState(0);<br>
+          return (<br>
+            &lt;div&gt;<br>
+              &lt;p&gt;Count: {count}&lt;/p&gt;<br>
+              &lt;button onClick={() => setCount(count + 1)}&gt;Increment&lt;/button&gt;<br>
+            &lt;/div&gt;<br>
+          );<br>
+        {'}'}
+      </code>
+      <p>This allows components to be dynamic and interactive, enhancing the user experience.</p>
+    </section>
+
+    <section class="main-section" id="Lifecycle_Methods">
+      <header>Lifecycle Methods</header>
+      <p>Lifecycle methods are hooks that allow you to run code at specific points in a component's life. They are primarily used in class components.</p>
+      <p>The most common lifecycle methods are:</p>
+      <ul>
+        <li><strong>componentDidMount:</strong> Invoked immediately after a component is mounted.</li>
+        <li><strong>componentDidUpdate:</strong> Invoked immediately after updating occurs.</li>
+        <li><strong>componentWillUnmount:</strong> Invoked immediately before a component is unmounted and destroyed.</li>
+      </ul>
+      <p>Here's an example that uses lifecycle methods:</p>
+      <code>
+        class MyComponent extends React.Component {'{'}<br>
+          componentDidMount() {'{'}<br>
+            console.log('Component mounted');<br>
+          {'}'}<br>
+          render() {'{'}<br>
+            return &lt;div&gt;Hello World!&lt;/div&gt;<br>
+          {'}'}<br>
+        {'}'}
+      </code>
+      <p>Using these methods helps manage resources effectively in your React applications.</p>
+    </section>
+
+    <section class="main-section" id="Hooks_in_React">
+      <header>Hooks in React</header>
+      <p>Hooks are a feature introduced in React 16.8 that allow you to use state and other React features without writing a class.</p>
+      <p>The most common hooks are useState and useEffect.</p>
+      <p>Here's how you can use the useState hook:</p>
+      <code>
+        const MyComponent = () => {'{'}<br>
+          const [name, setName] = useState('');<br>
+          return (<br>
+            &lt;input type="text" onChange={(e) => setName(e.target.value)} /&gt;<br>
+            &lt;p&gt;Hello, {name}!&lt;/p&gt;<br>
+          );<br>
+        {'}'}
+      </code>
+      <p>The useEffect hook lets you perform side effects in your components. Here’s a simple example:</p>
+      <code>
+        useEffect(() => {'{'}<br>
+          console.log('Component mounted');<br>
+        {'}'});<br>
+      </code>
+      <p>Using hooks simplifies your component logic and promotes better code organization.</p>
+    </section>
+  </main>
+
+</body>
+</html>

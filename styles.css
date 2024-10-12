@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  #navbar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #333; 
+    color: #ffffff;
+    padding: 20px;
+    overflow-y: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #navbar header {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 20px 0;
+    font-size: 1.2em;
+    background-color: #221616;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #575757;
+    background-color: #180e0e;
+    color: #575757;
+  }
+  
+  #main-doc {
+    margin-left: 270px; 
+    padding: 20px;
+    max-width: 900px; 
+  }
+  
+  .main-section {
+    background: #ffffff; 
+    margin: 20px auto;
+    padding: 20px; 
+    width: 95%;
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .main-section h2 {
+    color: #007acc; 
+  }
+  
+  header {
+    font-size: 1.8em; 
+    color: #007acc; 
+    margin-bottom: 10px; 
+  }
+  
+  h2 {
+    font-size: 1.5em; 
+    color: #007acc; 
+    margin: 10px 0; 
+  }
+  
+  ul {
+    margin-left: 20px; 
+  }
+  
+  code {
+    background: #f0f0f0; 
+    padding: 2px 4px; 
+    border-radius: 3px; 
+  }
+  
+  @media (max-width: 768px) {
+    #navbar {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      position: static;
+      height: auto;
+      text-align: center;
+      padding: 10px 0; 
+    }
+    
+    #navbar header {
+      text-align: center; 
+      font-size: 1.3em;
+    }
+    .nav-link {
+      width: 80%;
+      margin: 10px;
+      padding: 10px;
+      font-size: 1.0em;
+    }
+    #main-doc {
+      margin-left: 0;
+      padding: 10px;
+      width: 100%;
+    }
+    .main-section {
+      margin: 20px 0;
+      width: 85%;
+    }
+} 
